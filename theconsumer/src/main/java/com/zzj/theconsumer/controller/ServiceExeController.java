@@ -1,6 +1,8 @@
 package com.zzj.theconsumer.controller;
 
+import com.zzj.services.TestService;
 import com.zzj.theconsumer.services.ServiceExe;
+import jdk.nashorn.internal.ir.annotations.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +23,7 @@ public class ServiceExeController {
     @RequestMapping(value = "/aaa",method = RequestMethod.GET)
     public String exe(HttpServletRequest request){
         String bi = request.getParameter("bi");
-        String sss = (String) serviceExe.getSomething(bi);
+        String sss = (String) serviceExe.getName();
         return sss;
     }
 }

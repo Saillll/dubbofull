@@ -1,17 +1,21 @@
 package com.zzj.theconsumer.services;
 
-import com.zzj.theservice.interfaces.ServiceInterface;
-import jdk.nashorn.internal.ir.annotations.Reference;
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.zzj.services.TestService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ServiceExe implements ServiceInterface {
+@Slf4j
+public class ServiceExe {
 
-    @Reference
-    private ServiceInterface serviceInterface;
+    @Reference(version = "1.0",group = "zzj")
+    private TestService testService;
 
-    @Override
-    public Object getSomething(String id) {
-        return serviceInterface.getSomething(id);
+    public String getName() {
+        String end = "";
+        end = testService.getName();
+        log.info(end);
+        return end;
     }
 }
