@@ -1,0 +1,20 @@
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo-->
+<!--http://code.alibabatech.com/schema/dubbo/dubbo.xsd">-->
+
+<!--    &lt;!&ndash; 应用配置，不要与提供方相同 &ndash;&gt;-->
+<!--    <dubbo:application name="dubbo-interfaces-provider"/>-->
+
+<!--    &lt;!&ndash; 注册中心配置，使用zookeeper注册中心暴露服务地址 &ndash;&gt;-->
+<!--    <dubbo:registry address="zookeeper://127.0.0.1:2181" timeout="60000" />-->
+
+<!--    &lt;!&ndash;关闭服务消费方所有服务的启动检查。dubbo缺省会在启动时检查依赖的服务是否可用，不可用时会抛出异常，阻止Spring初始化完成。&ndash;&gt;-->
+<!--    <dubbo:consumer check="false" />-->
+<!--    <dubbo:protocol name="dubbo" port="20880" />-->
+
+<!--    &lt;!&ndash; 使用注解方式暴露接口，会自动扫描package下所有包中dubbo相关的注解，这样就不用在xml中再针对每个服务接口配置dubbo:service interface&ndash;&gt;-->
+<!--    <dubbo:annotation package="com.zzj.theservice.services"/>-->
+<!--    &lt;!&ndash;<dubbo:service interface="com.practice.springboot.dubbo.provider.SayHelloImpl" ref="SayHelloImpl"/>&ndash;&gt;-->
+<!--</beans>-->
