@@ -4,6 +4,8 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.zzj.entity.PaEntity;
 import com.zzj.services.TestService;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -21,6 +23,7 @@ public class ServiceExe {
         return end;
     }
     public PaEntity fixPaEntity() {
+//        Logger log = LoggerFactory.getLogger("");
         PaEntity pa = new PaEntity();
         PaEntity end = testService.fixPaEntity(pa);
         log.info(end.toString());
